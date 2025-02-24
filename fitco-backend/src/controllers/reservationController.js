@@ -36,6 +36,7 @@ exports.getUserReservations = async (req, res) => {
   try {
     const reservations = await Reservation.findAll({
       where: { user_id: req.user.id },
+      include: Service,
     });
     res.json(reservations);
   } catch (error) {
