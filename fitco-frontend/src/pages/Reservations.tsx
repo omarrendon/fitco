@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Container, Grid, Typography } from "@mui/material";
-import ReservationForm from "../componets/ReservationForm";
-import NavBar from "../componets/NavBar";
+import ReservationForm from "../components/ReservationForm";
+import NavBar from "../components/NavBar";
 import api from "../services/api";
-import ReservationCard from "../componets/ReservationCard";
+import ReservationCard from "../components/ReservationCard";
 
 interface Reservation {
   id: number;
