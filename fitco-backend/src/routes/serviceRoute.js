@@ -5,12 +5,13 @@ const {
   getServiceById,
   deleteService,
 } = require("../controllers/serviceController");
+const authMiddleware = require("../middlewares/authMiddleware");
 
 const router = express.Router();
 
-router.post("/", createService); // Solo admin
+router.post("/", authMiddleware, createService); // Solo admin
 router.get("/", getAllServices);
 router.get("/:id", getServiceById);
-router.delete("/:id", deleteService); // Solo admin
+router.delete("/:id", authMiddleware, deleteService); // Solo admin
 
 module.exports = router;
