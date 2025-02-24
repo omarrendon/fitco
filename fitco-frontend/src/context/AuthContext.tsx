@@ -1,5 +1,6 @@
 import { createContext, useState, ReactNode } from "react";
 
+// TODO INTERFACE USER
 interface AuthContextType {
   user: any;
   login: (userData: any) => void;
